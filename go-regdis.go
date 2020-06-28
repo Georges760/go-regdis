@@ -14,6 +14,11 @@ type Element struct {
 	Semantic   map[uint64]string
 }
 
+var SemanticEnable = map[uint64]string{
+	0: "Disabled",
+	1: "Enabled",
+}
+
 func Dissect(reg uint64, elements []Element) (ret string) {
 	var totalBitSize uint8
 	for _, e := range elements {
